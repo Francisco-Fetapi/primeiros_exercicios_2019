@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algumas coisas a mais de CSS</title>
+</head>
+<body>
+    
+    <div name='d'>
+        <h1>Aprendendo mais um pouco sobre formatação com CSS</h1><br><br>
+        <h2>Aprendendo mais um pouco sobre formatação com CSS3</h1>
+    </div>
+
+    <div class="div">
+        <div class="divisinha1"></div>
+        <div class="divisinha2"></div>
+
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, aliquam error! Iusto repellat mollitia veniam consequatur nihil quibusdam, voluptatum cumque, excepturi laborum a voluptatibus nulla tempore ipsam! Dicta, esse excepturi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic enim aliquid consectetur optio repellendus. Est, reiciendis accusamus ipsum iure ut quasi excepturi molestias natus, inventore adipisci molestiae, dignissimos voluptatem tempora?
+            Dolores tempore eum ut earum quasi minus illo ad aut tenetur incidunt asperiores, saepe similique quas dolor repellat iure numquam, laboriosam tempora. Quod ipsum tempore cum mollitia ipsa, nemo sapiente!
+            Odit accusamus architecto nulla voluptatem debitis eaque, molestiae, repellendus iure ut fuga quae nobis eligendi, quasi officia amet voluptatum ad error numquam laudantium ea? Iste quos quas alias laudantium praesentium!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus enim praesentium obcaecati, ab modi nemo quasi, qui non expedita ea dolores. Quibusdam iure mollitia temporibus possimus dicta omnis accusamus.
+            Atque aut adipisci non modi exercitationem illum nulla culpa possimus aliquam doloremque maxime ut expedita aspernatur eligendi natus autem, soluta nisi ipsum suscipit! Rerum obcaecati explicabo harum. Aut, tenetur voluptate?
+            Eos harum non culpa consequatur? Ad, nostrum hic. Maxime, omnis repellat quos ad odit quas quae officiis, obcaecati autem voluptatum unde? Velit earum neque ducimus officia, deserunt eligendi fuga excepturi.
+            Possimus temporibus fuga laborum nihil corporis commodi, aperiam harum, animi unde tenetur at dignissimos voluptate sapiente illum vitae repudiandae ipsam consectetur aliquid accusantium, dolorem et perferendis ullam laudantium ratione! Numquam!
+            <div class="divisinha1"></div>
+            <div class="divisinha2"></div>
+    
+            Tempore magnam delectus et nihil iste suscipit, tenetur deserunt sit amet est? Temporibus tempora labore quia aliquam vitae eaque libero qui laudantium quis, ipsum magni? Quo optio provident earum delectus!
+            A, neque iusto perferendis, tenetur ratione officia culpa magni vel non, cumque illum? Dolor vitae nulla maiores harum ratione iste eius adipisci, in minima nesciunt aut quos saepe earum qui.
+            Nihil consequuntur porro molestiae magnam doloribus quasi dolores nobis deleniti, obcaecati atque, neque sed dolore. Minima dolorum recusandae at. Mollitia, minus officiis ipsum eum voluptatibus distinctio beatae praesentium? Soluta, error?
+            Quos odio ex a neque eius iste animi magnam quaerat sapiente saepe. Totam accusantium assumenda optio quaerat dolore cumque laboriosam consectetur, delectus libero magnam inventore numquam provident saepe. Eligendi, alias.
+        </span>
+
+    </div>
+    
+
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        word-break:break-all
+    }
+    [name]{
+        color: red;
+    }
+    body{
+        background-color: rgba(17, 18, 19, 0.301);
+        padding:12px;
+        color: white;
+        font-weight: 800;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.63);
+        font-family: courier;
+        animation-name:mudaBack;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-delay: 3s;
+        animation-direction: alternate;
+        transition:all ease-in .7s;
+    }
+    @keyframes mudaBack {
+        0%{
+            background-image: repeating-linear-gradient(to bottom right,rgba(55, 83, 175, 0.479) 50%,rgba(218, 224, 222, 0.753));
+        }
+        20%{
+            background-image: repeating-linear-gradient(to top left,rgba(218, 224, 222, 0.842),rgba(0, 60, 255, 0.664) 70%);
+        }
+        40%{
+            background-image: repeating-linear-gradient(to bottom right,rgba(5, 5, 5, 0.479) 50%,rgba(43, 62, 170, 0.753));
+        }
+        60%{
+            background-image: repeating-linear-gradient(to top left,rgba(21, 22, 22, 0.842),rgba(255, 30, 0, 0.664) 70%);
+        }
+        80%{
+            background-image: repeating-linear-gradient(to bottom right,rgba(5, 24, 12, 0.904) 50%,rgba(43, 170, 153, 0.753));
+        }
+        100%{
+            background-image: repeating-linear-gradient(to top left,rgba(132, 187, 30, 0.904) 70%,rgba(230, 172, 13, 0.753));
+        }
+
+    }
+
+
+    h1{
+        font-style: italic;
+        /* text-shadow:5px 1px 0px rgba(0, 0, 0, 0.404),0px 0px 10px blue; */
+    }
+    h2{
+        font-variant: small-caps;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        font-size: medium;
+    }
+    div{
+        margin: 1%;
+        font-size: small;
+    }
+    .div{
+        border: 2px solid white;
+        width:85%;
+        height: 272px;
+        padding: 8px 12px;
+        float: left;
+        box-shadow:32px 22px 12px 22px rgba(0, 0, 0, 0.17);
+        overflow-y: scroll;
+        transition-duration: 2s;
+        transition-timing-function: ease-out;
+        transition-delay:.5s;
+    }
+    .divisinha1{
+        width:129px;
+        border: 2px solid whitesmoke;
+        height: 72px;
+        float: left;
+        background-image: linear-gradient(to top left,rgb(0, 119, 255),rgba(0, 0, 0, 0.527));
+ 
+    }
+    .divisinha2{
+        width:129px;
+        border: 2px solid whitesmoke;
+        height: 72px;
+        float: right;
+        background-image: linear-gradient(to bottom right,rgba(0, 255, 136, 0.753),rgba(224, 218, 218, 0.685));
+    }
+    div div{
+        transition-timing-function: linear;
+        transition-duration: 2s;
+    }
+    div:hover{
+        background-color: rgba(0, 0, 0, 0.63);
+    }
+    div:hover div{
+        background-color: rgba(255, 99, 71, 0.521);
+    }
+    div div:hover{
+        background-color: white;
+    }
+    
+
+
+</style>
+
+</body>
+</html>

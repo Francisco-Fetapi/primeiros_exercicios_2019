@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forumulario</title>
+    <style>
+        label{
+            display: inline-block;
+            width:80px;
+            font-weight: bolder;
+            font-size:1em;
+        }
+        input,textarea{
+            display: inline-block;
+            width:220px;
+            border: 1px solid #ccc;
+            box-shadow: inset 2px 2px 1px #eee;
+            font-size:0.9em;
+            padding: 2px 5px;
+        }
+        textarea{
+            height:120px;
+        }
+        .hint{
+            margin-left:20px;
+            color: white;
+            padding: 2px 4px;
+            background-color: rgb(63, 85, 20);
+            opacity: 0;
+            position: relative;
+            transition: all .5s linear;
+        }
+        input:focus + .hint, textarea:focus + .hint{
+            opacity:1;
+        }
+        .error{
+            color: red;
+            font-style: italic;
+            font-size: .8em;
+            display: block;
+            margin: 5px 0px 0px 90px;
+            text-shadow: 1px 1px 1px #ccc;
+        }
+        button { 
+            background-color: #E5E5E5;
+            background-image: linear-gradient(top, #FFF, #E5E5E5); 
+            border: 1px solid #AAA; 
+            border-radius: 3px; 
+            color: #000; 
+            font-size: 0.8em; 
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        button:hover { 
+            background-color: #285582; 
+            background-image: linear-gradient(top, #3775B3, #285582);
+            border-color: #204569;
+            color: #FFF; 
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 3px #3775B3;
+        }
+        button:active { 
+            background-color: #204569; 
+            background-image: none; 
+            border-color: #1A3754; 
+            box-shadow: inset 0 2px 1px rgba(0,0,0, 0.15); 
+        }
+        button.btn { 
+            background-color: #6DA033; 
+            border-radius: 13px; 
+            border: 1px solid #588129; 
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4); 
+            color: white; 
+            font-size: 0.8em; 
+            font-weight: bold; 
+            padding: 5px 10px; 
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6); 
+            background-image: linear-gradient(to bottom, #6DA033 47%, #87C442 55%);
+        }
+        button.btn:hover { 
+            background-color: #618F2D; 
+            background-image: linear-gradient(to bottom, #618F2D 47%, #79B238 55%); 
+            border-color: #4E7324; 
+        }
+        button.btn:active{
+            background-image: none; 
+            background-color: #618F2D;
+            border-color: #405E1E;
+            box-shadow: inset 0 2px 1px rgba(0,0,0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Digite o seu email">
+            <span class="hint">por exemplo, seunome@gmail.com</span>
+            <span class="error">preencha o seu email corretamente</span>
+        </p>
+        <p>
+            <label for="assunto">Assunto: </label>
+            <input type="text" name="assunto" id="assunto">
+            <span class="hint">nos diga qual é o seu problema ou ideia</span>
+        </p>
+        <p>
+            <label for="msg">Mensagem: </label>
+            <textarea name="msg" id="msg"></textarea>
+            <span class="hint">escreva a sua mensegem em até 500 caracteres</span>
+        </p>
+        <button>Enviar mensagem</button>
+        <button class="btn">Limpar formulário</button>
+    </form>
+</body>
+</html>

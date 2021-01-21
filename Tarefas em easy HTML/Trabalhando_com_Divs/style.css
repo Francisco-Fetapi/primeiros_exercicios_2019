@@ -1,0 +1,48 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+*{
+  
+  margin-top:2px;
+  color:white;
+  }
+body{
+  background-color:black; 
+  margin-bottom:10px;
+  }
+div#site{
+  padding:2px;
+  background-color:#999999;
+  width:90%;
+  margin-top:10px;
+  }
+div#topo{
+  background-color:#333333;
+  width:100%;
+  height:15%;
+  }
+div#menu{
+  background-color:#333;
+  width:100%;
+  height:5%;
+  }
+div#conteudo{
+  background-color:#333;
+  width:65%;
+  height:60%;
+  float:left;
+  }
+div#slidebar{
+  background-color:#333;
+  width:34.3%;
+  height:60%;
+  float:right;
+  margin-left:2px;
+  margin-bottom:2px;
+  }
+div#rodape{
+  background-color:#333333;
+  width:100%;
+  height:15%;
+  clear:both;
+  }

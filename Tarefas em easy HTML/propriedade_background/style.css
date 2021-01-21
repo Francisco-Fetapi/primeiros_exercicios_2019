@@ -1,0 +1,19 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+body{
+  
+  /*
+  background-image: url(/storage/emulated/0/recordmaster/RecordMasterScreenshots/IMG_20190824_092710.jpg);
+  background-repeat:repeat-x;
+  background-color:#a34d4d; */
+  
+  background:#37b0d3 url( /storage/emulated/0/recordmaster/RecordMasterScreenshots/IMG_20190824_092710.jpg ) repeat-x;
+  }
+
+h1{
+  margin-top: 96px;
+  background-color:#a7a7a7;
+  color:blue;
+  
+  }

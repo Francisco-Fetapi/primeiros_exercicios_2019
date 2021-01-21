@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca Valores</title>
+
+    <style>
+        @charset "utf-8";
+       
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.582);
+            margin-left:auto;
+            margin-right: auto;
+            font:normal 16pt arial;
+            overflow-x: hidden;
+         }
+    </style>
+
+</head>
+<body>
+    
+    <script>
+
+        function Pessoa(nome_1,nome_2,idade,genero,interesses){
+
+            this.nome = {
+                nome1:nome_1,
+                nome2:nome_2
+            };
+            this.idade = idade;
+            this.genero = genero;
+
+            this.interesses = interesses;
+
+            this.Comprimenta = () => {
+                window.alert("Ola ah todos");
+            };
+            this.seApresenta = () => {
+                window.alert(`Meu nome é ${this.nome.nome1} ${this.nome.nome2} , tenho ${this.idade} anos e sou ${this.genero},claro! \n Tenho interesse em ${this.interesses[0]} e em ${this.interesses[1]}.`)
+            };
+        }
+
+        var francisco = new Pessoa("Francisco","Fetapi",17,"Homem",["Programacao Web","Mobile"]);
+        francisco.Comprimenta();
+        francisco.seApresenta();
+
+        var joana = new Pessoa("Joana","Catito",20,"Mulher",["Electricidade","Desenho"]);
+        joana.Comprimenta();
+        joana.seApresenta();
+
+
+    </script>
+
+</body>
+</html>

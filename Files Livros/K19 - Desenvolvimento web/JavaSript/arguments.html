@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando Js</title>
+</head>
+<body onresize="
+console.clear();
+console.log(`O tamanho da janela mudou para: ${window.innerWidth} px`)">
+    
+   <div class="cont a b" name="div">
+        <p>
+            No console , usa a function Soma() com n argumentos, para somar todos eles.
+        </p>
+
+        <select name="op" id="sel">
+            <option name="esc">Guardar Dados</option>
+            <option name="esc">Obter Dados</option>
+            <option name="esc">Apagar Dados</option>
+        </select>
+        <br><br>
+
+        <P id="p1">Nome: <input type="text" name="nome" id="n"> <br> <br></P>
+        Chave: <input type="text" name="chave" id="k">
+        <input type="button" value="Realizar Operação" onclick="funcao(n,k)">
+   </div>
+   
+    <script>
+     var select = document.getElementsByName('esc');
+    
+     function funcao(nome , chave){
+                if(select[0].selected){
+                    window.localStorage.setItem(chave.value,nome.value);
+                    window.alert('Dados Guardados');
+                }
+                else if(select[1].selected){
+                    document.getElementById('p1').style.display = "block";
+                    nome.value = window.localStorage.getItem(chave.value);
+                    window.alert(window.localStorage.getItem(chave.value));
+                }
+                else{
+                    window.localStorage.removeItem(chave.value);
+                }
+        }
+
+        document.getElementById('sel').onchange = function (){
+            if(select[1].selected || select[2].selected){
+                document.getElementById('p1').style.display = "none";
+            }
+            else if(select[0].selected){
+                document.getElementById('p1').style.display = "block";
+            }
+        }
+    
+
+
+            document.body.onload = function(){console.log('Bem vindo')}
+            
+            document.body.onkeyup = function(){
+                console.log(event.keyCode+" keyup");
+            }
+            // document.body.onkeydown = function(){
+            //     console.log("Tecla pressionada");
+            // }
+            document.body.onkeypress = function(){
+                console.log(event.keyCode+" keyPress");
+            }
+        
+            document.body.onresize = resize;
+            document.body.onscroll = scroll;
+
+            function resize() {
+                 var w = window.outerWidth; 
+                 var h = window.outerHeight;
+                 console.clear();
+                 console.log("resize(" + w + ", " + h + ")"); 
+            }
+
+            function scroll() {
+                var x = window.pageXOffset;
+                var y = window.pageYOffset; 
+                console.log("scroll(" + x + ", " + y + ")");
+             }
+
+
+
+           
+        function Soma(){
+            var soma = 0;
+            for(var i = 0;i<arguments.length;i++){
+                
+                soma += arguments[i];
+            }
+            return soma;
+        }
+        // console.log(Soma(2,2));
+        function mostraAttributes(elemento){
+            
+            window.alert(`Atributos do elemento: ${elemento.id}`);
+
+            for(let c = 0;c<elemento.attributes.length-1;c++){
+                window.alert(` ${elemento.attributes[c].name} = ${elemento.attributes[c].value}`);
+            }
+            elemento.addEventListener('click',function(){
+                window.alert("Objecto Clicado");
+            })
+        }
+
+    </script>
+</body>
+</html>

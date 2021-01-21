@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Classes</title>  
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        
+        <style>
+            @charset "utf-8";
+           
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color: rgba(0, 0, 0, 0.582);
+                margin-left:auto;
+                margin-right: auto;
+                font:normal 16pt arial;
+                overflow-x: hidden;
+             }
+             .buttonAp 
+                {
+                    color: #000000;
+                    font-family:Segoe UI, Tahoma, Sans-Serif;
+                    font-size:12pt;		
+                    font-weight:bold;
+                    border-right: #A0C0E7 1px solid; 
+                    border-top: #A0C0E7 1px solid; 
+                    border-left: #A0C0E7 1px solid;  
+                    border-bottom: #A0C0E7 1px solid;
+                    background: -moz-linear-gradient(top, #E2EBF5, #A0C0E7); /* for Firefox */
+                    background: -webkit-gradient(linear, left top, left bottom, from(#E2EBF5), to(#A0C0E7)); /* For Webkit Browsers */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E2EBF5', endColorstr='#A0C0E7'); /* for IE */
+                }
+
+                .listButton
+                {
+                    border-right: #A0C0E7 1px solid; 
+                    padding-right: 1px; 
+                    border-top: #A0C0E7 1px solid;  
+                    padding-bottom: 1px; 
+                    padding-left: 1px;
+                    border-left: #A0C0E7 1px solid;  
+                    padding-top: 1px; 
+                    border-bottom: #A0C0E7 1px solid;
+                    background-color: #E2EBF5;	
+                }
+
+                .fontItemListButton
+                {
+                    color: #000000;
+                    font-family:Segoe UI, Tahoma, Sans-Serif;
+                    font-size:10pt;	
+                }
+        </style>
+        
+
+        <script language="javascript" type="text/javascript">
+            function Pessoa() {
+                var nome;
+
+                this.getNome = function () {
+                    return nome;
+                };
+
+                this.setNome = function (value) {
+                    nome = value;
+                };
+            }
+
+            Pessoa.prototype.criarBotao = function (objRecipiente, value) {
+                var objButton = document.createElement('INPUT');
+
+                objButton.value = value;
+                objButton.style.width = '150px';
+                objButton.style.height = '70px';
+                objButton.className = 'buttonAp';
+                objButton.type = 'button';
+
+                var self = this;
+                objButton.onclick = function () { alert(self.getNome()); }
+
+                objRecipiente.appendChild(objButton);//Adiciona o elemento no elemento recipiente.
+            }
+
+            function PessoaJuridica() {
+                var cnpj;
+
+                this.getCNPJ = function () {
+                    return cnpj;
+                };
+
+                this.setCNPJ = function (value) {
+                    cnpj = value;
+                };
+            }
+
+            function PessoaFisica() {
+                var cpf;
+
+                this.getCPF = function () {
+                    return cpf;
+                };
+
+                this.setCPF = function (value) {
+                    cpf = value;
+                };
+            }
+
+            PessoaFisica.prototype = new Pessoa();
+            PessoaJuridica.prototype = new Pessoa();
+
+            var oListButton1;
+            var oListButton2;
+
+            function document_OnLoad() {
+                oPessoaFisica = new PessoaFisica();
+                oPessoaJuridica = new PessoaJuridica();
+
+                oPessoaFisica.setCPF('111111');
+                oPessoaFisica.setNome('João');
+
+                oPessoaJuridica.setCNPJ('222222');
+                oPessoaJuridica.setNome('Empresa');
+
+                oPessoaFisica.criarBotao(document.body, 'Fisica');
+                oPessoaJuridica.criarBotao(document.body, 'Juridica');
+            }
+
+        </script>
+    </head>
+    <body onload="document_OnLoad();">
+        
+    </body>
+</html>

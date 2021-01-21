@@ -1,0 +1,36 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+ul{
+    background-color: #ccc;
+    margin: 10px;
+    width:90%;
+    margin: 20px auto;
+    color: white;
+}
+ul p{
+    background-color: #0004;
+    padding:20px;
+    cursor: pointer;
+    border:1px solid #aaa;
+    font-size:22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul p:hover{
+    background-color: #0007;
+}
+ul p:active{
+    background-color: #0009;
+}
+ul div{
+    padding: 0 10px;
+    max-height:0px;
+    overflow:hidden;
+    line-height: 1.5;
+    transition: max-height .5s ease-out;
+}
+
+ul div.ativo{
+    max-height:100vh;
+}

@@ -1,0 +1,25 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+ul {
+height: 32px;
+list-style:none;
+padding: 0;
+width:100%;
+}
+li {
+float: left;
+line-height:-200%;
+font-size:25px;
+width:20%;
+text-align: center;
+}
+
+ul {
+background-color: #CCC;
+color: black;
+}
+li:hover{
+  background-color:#17a8d9;
+  
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poder CSS3</title>
+    <style>
+        .button { 
+            background-color: #999999;
+            color: white; 
+            display: inline-block; 
+            font-weight: bold; 
+            padding: 0.5em 1em; 
+            text-decoration: none; 
+        }
+        .primary-button { background-color: #389739; }
+        .big-button { font-size: 1.1em; }
+        .small-button { font-size: 0.9em;}
+
+        .tnt {
+            background-color: black;
+            border-color: black;
+            border-top-left-radius: 25px 10px;
+            border-top-right-radius: 25px 10px;
+            height: 50px; 
+            line-height: 50px; 
+            text-align: center; 
+            width: 50px; 
+            color: white;
+        }
+        #div2{ 
+            background-color: #000; 
+            width: 50px; 
+            height: 10px; 
+            padding: 20px 50px; 
+        }
+        .cloud { 
+            background-color: #FFF; 
+            border-radius: 48px; 
+            display: inline-block; 
+            height: 16px; 
+            position: relative; 
+            width: 48px; 
+        }
+        .cloud::before,.cloud::after {
+            content: ''; 
+            background-color: white;
+            position: absolute; 
+            border-radius: 50%; 
+            height: 14px; 
+            width: 14px;
+            right: 7px; 
+            top: -6px; 
+        }
+        .cloud::after {   
+            left: 7px; 
+            right: auto;
+            top: -10px; 
+            width: 23px; 
+            height: 23px;
+        }
+
+        .div{ 
+            font-weight: bold; 
+            height: 50px; 
+            line-height: 25px; 
+            margin-bottom: 10px; 
+            padding: 5px; 
+            text-align: center; 
+            width: 220px; 
+        }
+        .blue { background-image: linear-gradient(to top, #4377FA, #0537B7); }
+        .reverse-blue { background-image: linear-gradient(to top, #0537B7, #4377FA); }
+        .omg-pink { background-image: linear-gradient(to top right, #FC0050, #FF79A3); }
+        .stops { background-image: linear-gradient(to top, #F5B951 48%, #F2A31C 56%); }
+    </style>
+</head>
+<body>
+    <a href="#" class='button primary-button big-button'>Enviar mensagem</a> 
+    <a href="#" class='button small-button'>Cancelar</a>
+
+    <h3 class='tnt'>TNT</h3>
+
+    <div id="div2"> <span class='cloud'></span></div>
+    <br>
+    
+    <div class='div blue'> Um gradiente azul clássico, utilizando 2 tons similares. </div>
+    <div class='div reverse-blue'> Uma versão inversa do gradiente azul. </div>
+    <div class='div omg-pink'> Combinando "top" e "right" para a direção. </div>
+    <div class='div stops'> Utilizando posições específicas para as cores.
+
+</body>
+</html>

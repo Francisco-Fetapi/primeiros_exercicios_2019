@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            overflow-x: hidden;
+            background-color: rgba(0, 0, 0, 0.76);
+        }
+        #nums{
+            max-width:340px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #n{
+            list-style: none;
+            padding: 0px;
+        }
+        #n li{
+            background-color: rgb(32, 126, 214);
+            padding:9px 12px;
+            border-bottom:2px solid #fff;
+            font-size:25px;
+            color: white;
+            margin-left:200%;
+            transition: all .5s linear;
+        }
+        #n li.visivel{
+            margin-left: 0%;
+        }
+        footer{
+            height:40px;
+            width:100%;
+            border:1px solid gray;
+            background-color: chartreuse;
+            position: fixed;
+            top: 0px;
+            max-width:340px;
+        }
+        .btn{
+            padding:11px 11px;
+            background-color: transparent;
+            outline: none;
+            border:2px solid white;
+            color: white;
+            text-shadow:1px 1px 1px black;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: rgba(0, 0, 0, 0.692);
+        }
+        .btn:active{
+            background-color: rgba(0, 0, 0, 0.815);
+        }
+        #autor{
+            font-size:18px;
+            float: right;
+            margin-right:12px;
+            color:gray;
+            text-shadow:1px 1px 1px white;
+        }
+    </style>
+</head>
+<body>
+    <div id="nums">
+        <ul id="n">
+
+        </ul>
+        <footer>
+            <button class="btn" onclick="recomecar()">Recomeçar</button>
+            <span id="autor">
+                Por: <span>Francisco Fetapi</span>
+            </span>
+        </footer>
+    </div>
+
+    <script>
+        var a = window.prompt('Desejas contar apartir de quanto?');
+        document.querySelector('body').setAttribute('onload',`contar(${a})`);
+
+        var lista = document.getElementById('n');
+        var cont; 
+        var lis;
+        var De;
+        var contadorInter = 1;
+        function contar(de){
+            De = de;
+            for(c = de-1;c<=100;c++){
+            lista.innerHTML += `<li>${c}</li>`;
+            var n = 1;
+            cont = setTimeout(()=>{
+                lis = document.querySelectorAll('#n li');
+                lis[n].classList.add('visivel');
+                console.log(n);
+                n++;
+            },contadorInter*100);
+            contadorInter++;
+        }
+        clearTimeout(cont);  
+    }
+    function recomecar(){
+        clearTimeout(cont);
+        lista.innerHTML = "";  
+        contar(De);    
+    }
+
+    </script>
+</body>
+</html>

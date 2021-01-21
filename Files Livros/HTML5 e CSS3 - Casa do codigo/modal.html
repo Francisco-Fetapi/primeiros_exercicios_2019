@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        .notice { 
+            background-color: #FFF; 
+            border: 1px solid #000;
+            height:130px;
+            width:380px;
+            padding: 30px;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            margin: -75px 0 0 -230px;
+            z-index: 1;
+        }
+        .overlay { 
+            position: fixed; 
+            top: 0; left: 0; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            width: 100%; 
+            height: 100%; 
+        }
+        .notice, .overlay { display: none; }
+        .notice .close { 
+            background-color: #FF1A2D; 
+            color: #FFF; 
+            padding: 5px; 
+            position: absolute; 
+            right: -25px; 
+            top: -12px; 
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;">Exibir o modal</a>
+    <div class='notice'> 
+        <h1>Atenção</h1> 
+        <p>Aqui você pode exibir alguma mensagem importante, que ela irá sobrepor todo o conteúdo do seu site.</p> 
+        <a href='javascript:;' class='close'>Fechar</a>
+    </div>
+    <div class='overlay'></div>
+
+    <script>
+        document.querySelector('a').onclick = function(){
+            document.querySelectorAll('.notice, .overlay').forEach(el=>{
+                el.style.display = 'block';
+            });
+        }
+        document.querySelectorAll('.close,.overlay').forEach(ell=>{
+            ell.onclick = function(){
+                document.querySelectorAll('.notice, .overlay').forEach(el=>{
+                    el.style.display = 'none';
+                });
+            }
+        })
+        
+    </script>
+</body>
+</html>

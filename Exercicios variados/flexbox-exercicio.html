@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - exercicio</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        div{
+           padding:110px 80px;
+           border:1px solid white;
+        }
+        #tudo{
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.664);
+        }
+        .n{
+            background-color: rgba(255, 68, 0, 0.562);
+        }
+        #N{
+            width:40%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        #LP{
+            width:60%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        #L{
+            /* flex: 0 0 100%; */
+            background-color: rgba(0, 132, 255, 0.568);
+        }
+        .p{
+            background-color: rgba(0, 255, 191, 0.61);
+        }
+        #P{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .p{
+            flex: 1 1 auto;
+            height:100%;
+        }
+        @media (max-width:845px){
+            #tudo{
+                flex-flow: column wrap;
+            }
+            #N{
+                width:100%;
+                flex-flow: row wrap;
+            }
+            .n{
+                flex: 1 1 auto;
+            }
+            #LP{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <main id="tudo">
+
+        <section id="N">
+            <div class="n n1"></div>
+            <div class="n n2"></div>
+            <div class="n n3"></div>
+        </section>
+
+        <section id="LP">
+            <div id="L"></div>
+            <section id="P">
+                <div class="p p1"></div>
+                <div class="p p2"></div>
+                <div class="p p3"></div>
+            </section>
+        </section>
+
+    </main>
+
+    <script>
+        window.onresize = function(){
+            document.querySelector('.n1').innerHTML = window.innerWidth+"px";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+   
+    <style>
+        body{
+            background-color: hsl(197, 48%, 46%);
+            color: white;
+        }
+    </style>
+    
+    <form action="recebe.html" method="get">
+   
+    <fieldset >
+            <legend>Dados sem Sentido</legend>
+        <p>
+            <input type="date" placeholder="" name="data" required>
+        </p>
+
+        <select name="lugares">
+                <optgroup label="Angola Provincias">
+                    <option>Benguela</option>
+                    <option>Luanda</option>
+                    <option>Bengo</option>
+                    <option>Lunda-Sul</option>
+                    <option>Lunda-Norte</option>
+                    <option>Moxico</option>
+                </optgroup>
+                <optgroup label="Brasil Provincias">
+                    <option selected>Belo Horizonte</option>
+                    <option>Brasilia</option>
+                    <option>São Paulo</option>
+                </optgroup>
+        </select>
+        <p>
+            Seu nome:
+            <input type="text" name="nome" placeholder="Digite seu nome" list="nomes">
+        </p>
+        <p>
+            Senha:
+                <input type="text" name="nome" placeholder="8letras e 3numeros" pattern="[A-Z]{8} [0-9]{3}" title="8 letras e 3 numeros">
+        </p>
+        <input type="submit" value="Enviar">
+    </fieldset>
+    </form>
+
+    <datalist id="nomes">
+        <option>Paula</option>
+        <option>Pedro</option>
+        <option>Camalta</option>
+    </datalist>
+</body>
+</html>

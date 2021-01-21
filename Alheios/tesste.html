@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS MAESTRO</title>
+<style>
+#bike{
+position: relative;
+width: 400px;
+height: 25px;
+margin: 20px 0;
+}
+#frontweel, #backweel{
+width: 120px;
+height: 120px;
+border: solid 3px black;
+position: absolute;
+border-radius: 70px;
+top: 68px;
+}
+#frontweel{
+left: 35px;
+animation-name: Denis;
+-webkit-animation-name: Denis;
+-o-animation-name: Denis;
+-moz-animation-name: Denis;
+animation-duration: 10s;
+-webkit-animation-duration: 10s;
+-moz-animation-duration: 10s;
+-o-animation-duration: 10s;
+-o-animation-play-state: paused;
+animation-play-state: paused;
+-moz-animation-play-state: paused;
+-webkit-animation-play-state: paused;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+-o-animation-iteration-count: infinite;
+animation-timing-function: ease-in;
+-webkit-animation-timing-function: ease-in;
+-moz-animation-timing-function: ease-in;
+-o-animation-timing-function: ease-in;
+}
+#backweel{
+left: 276px;
+animation-name: Power;
+-webkit-animation-name: Power;
+-o-animation-name: Power;
+-moz-animation-name: Power;
+animation-duration: 10s;
+-webkit-animation-duration: 10s;
+-moz-animation-duration: 10s;
+-moz-animation-duration: 10s;
+-o-animation-play-state: paused;
+animation-play-state: paused;
+-moz-animation-play-state: paused;
+-webkit-animation-play-state:paused;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+-o-animation-iteration-count: infinite;
+animation-timing-function: ease-in;
+-webkit-animation-timing-function: ease-in;
+-moz-animation-timing-function: ease-in;
+-o-animation-timing-function: ease-in;
+}
+@keyframes Denis{
+0%{
+transform: rotate(0deg);
+}
+25%{
+transform: rotate(300deg);
+-webkit-transform: rotate(300deg);
+-moz-transform: rotate(300deg);
+-ms-transform: rotate(300deg);
+-o-transform: rotate(300deg);
+}
+50%{
+transform: rotate(400deg);
+-webkit-transform: rotate(400deg);
+-moz-transform: rotate(400deg);
+-ms-transform: rotate(400deg);
+-o-animation: rotate(400deg);
+}
+75%{
+transform: rotate(600deg);
+-webkit-transform: rotate(400deg);
+-moz-transform: rotate(400deg);
+-o-transform: rotate(400deg);
+-ms-transform: rotate(400deg);
+}
+100%{
+transform: rotate(800deg);
+-webkit-transform: rotate(400deg);
+-moz-transform: rotate(400deg);
+-ms-transform: rotate(400deg);
+-o-transform: rotate(400deg);
+}
+}
+@keyframes Power{
+0%{
+transform: rotate(0deg);
+}
+25%{
+transform: rotate(200deg);
+-webkit-transform: rotate(300deg);
+-moz-transform: rotate(300deg);
+-ms-transform: rotate(300deg);
+-o-transform: rotate(300deg);
+}
+50%{
+transform: rotate(400deg);
+-webkit-transform: rotate(400deg);
+-moz-transform: rotate(400deg);
+-ms-transform: rotate(400deg);
+-o-animation: rotate(400deg);
+}
+75%{
+transform: rotate(600deg);
+-webkit-transform: rotate(400deg);
+-moz-transform: rotate(400deg);
+-o-transform: rotate(400deg);
+-ms-transform: rotate(400deg);
+}
+100%{
+transform: rotate(800deg);
+-webkit-transform: rotate(400deg);
+-moz-transform: rotate(400deg);
+-ms-transform: rotate(400deg);
+-o-transform: rotate(400deg);
+}
+}
+.center{
+position: absolute;
+top: 56px;
+left: 58px;
+width: 10px;
+height: 10px;
+border-radius: 5px;
+background-color: black;
+}
+div[class*="spoke"]{
+height: 1px;
+width: 62px;
+background-color: black;
+top: 60px;
+transform-origin: 100% 50%;
+position: absolute;
+}
+.spoke2{
+transform: rotate(72deg);
+-moz-transform: rotate(72deg);
+-o-transform: rotate(72deg);
+-webkit-transform: rotate(72deg);
+}
+.spoke3{
+transform: rotate(144deg);
+-moz-transform: rotate(144deg);
+-ms-transform: rotate(144deg);
+-o-transform: rotate(144deg);
+-webkit-transform: rotate(144deg);
+}
+.spoke4{
+transform: rotate(216deg);
+-webkit-transform: rotate(216deg);
+-moz-transform: rotate(216deg);
+-o-transform: rotate(216deg);
+-ms-transform: rotate(216deg);
+}
+.spoke5{
+transform: rotate(288deg);
+-o-transform: rotate(288deg);
+-moz-transform: rotate(288deg);
+-ms-transform: rotate(288deg);
+-webkit-transform: rotate(288deg);
+}
+#bike div[id*="frame"]{
+height: 10px;
+background-color: red;
+position: absolute;
+z-index: 2;
+border-radius: 5px;
+}
+#frametop{
+width: 163px;
+top: 20px;
+left: 158px;
+}
+#framechainstay{
+top: 131px;
+left: 104px;
+width: 85px;
+}
+#framefork, #frameseattube{
+top: 75px;
+left: 270px;
+width: 125px;
+transform: rotate(75deg);
+-moz-transform: rotate(75deg);
+-ms-transform: rotate(75deg);
+-o-transform: rotate(75deg);
+-webkit-transform: rotate(75deg);
+}
+#frameseattube{
+left: 112px;
+}
+#frameseatstay{
+top: 78px;
+left: 66px;
+height: 6px;
+width: 130px;
+transform: rotate(-64deg);
+-moz-transform: rotate(-64deg);
+-o-transform: rotate(-64deg);
+-webkit-transform: rotate(-64deg);
+-ms-transform: rotate(-64deg);
+}
+#framedowntube{
+top: 78px;
+left: 165px;
+width: 170px;
+transform: rotate(-40deg);
+}
+.handlebars{
+position: relative;
+left: 310px;
+}
+#post{
+background-color: silver;
+height: 10px;
+width: 10px;
+position: absolute;
+top: 10px;
+}
+#bar, #handle{
+position: absolute;
+top: 5px;
+width: 50px;
+background-color: silver;
+border-radius: 20px;
+transform: rotate(-20deg);
+-webkit-transform: rotate(-20deg);
+-moz-transform: rotate(-20deg);
+-o-transform: rotate(-20deg);
+-ms-transform: rotate(rotate(-20deg));
+transform-origin: 0% 50%;
+-webkit-transform-origin: 0% 50%;
+-moz-transform-origin: 0% 50%;
+-ms-transform-origin: 0% 50%;
+-o-transform-origin: 0% 50%; 
+height: 10px;
+}
+#handle{
+background-color: black;
+width: 25px;
+height: 12px;
+-webkit-transform: rotate(-20deg) translateX(25px);
+-moz-transform: rotate(-20deg) translateX(25px);
+-ms-transform: rotate(-20deg) translateX(25px);
+-o-transform: rotate(-20deg) translateX(25px);
+transform: rotate(-20deg) translateX(25px);
+}
+#seat{
+z-index: 3;
+background-color: black;
+position: absolute;
+left: 135px;
+border-radius: 20px;
+} 
+#base{
+width: 30px;
+height: 25px;
+}
+#nose{
+background-color: black;
+width: 40px;
+height: 15px;
+position: absolute;
+top: 0;
+left: 20px;
+border-radius: 15px;
+}
+body{
+display: flex;
+justify-content: center;
+width: 100%;
+height: 500px;
+align-items: center;
+}
+div[id^="controls"]{
+align-self: flex-end;
+}
+button:first-child{
+border: solid 1px green;
+height: 30px;
+background-color: green
+}
+button:last-child{
+border: solid 1px red;
+height: 30px;
+background-color: red;
+}
+</style>
+</head>
+<body>
+<div id="bike">
+<div id="frametop"></div>
+<div id="framechainstay"></div>
+<div id="framefork">
+</div>
+<div id="frameseattube"></div>
+<div id="frameseatstay"></div>
+<div id="framedowntube"></div>
+<div id="seat">
+<div id="base"></div>
+<div id="nose"></div>
+</div>
+<div class="handlebars">
+<div id="post"></div>
+<div id="bar"></div>
+<div id="handle"></div>
+</div>
+<div id="backweel">
+<div class="center"></div>
+<div class="spoke1"></div>
+<div class="spoke2"></div>
+<div class="spoke3"></div>
+<div class="spoke4"></div>
+<div class="spoke5"></div>
+</div>
+<div id="frontweel">
+<div class="center"></div>
+<div class="spoke1"></div>
+<div class="spoke2"></div>
+<div class="spoke3"></div>
+<div class="spoke4"></div>
+<div class="spoke5"></div>
+</div>
+</div>
+<div id="controls">
+<button id="running">Rodar os pneus</button>
+<button id="stopped">Parar a rotação</button>
+</div>
+</body>
+<script>
+var start=document.querySelector("#running").addEventListener("click", function(){
+var backweel=document.getElementById("backweel");
+var frontweel=document.getElementById("frontweel");
+frontweel.style.animationPlayState="running";
+frontweel.style.animationPlayState="running";
+backweel.style.animationPlayState="running";
+backweel.style.webkitAnimationPlayState="running"; 
+})
+var stop=document.querySelector("#stopped").addEventListener("click", function(){
+var backweel=document.getElementById("backweel");
+var frontweel=document.getElementById("frontweel");
+frontweel.style.animationPlayState="paused";
+frontweel.style.webkitAnimationPlayState="paused";
+backweel.style.animationPlayState="paused";
+backweel.style.webkitAnimationPlayState="paused";
+})
+</script>
+</html>

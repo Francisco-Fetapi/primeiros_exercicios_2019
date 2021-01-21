@@ -1,0 +1,33 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+*{
+ margin-top:0px;
+}
+
+#p{
+  
+  text-align:justify; /* left right center*/
+  text-indent:7%;
+  letter-spacing:4px; /* ex.: um valor negativo*/
+  word-spacing:8px;  /* ex.: um valor negativo */
+  text-decoration:overline red; /* underline */
+  
+}
+
+#p2{
+/*tudo maiusc ---  text-transform:uppercase; */
+ /* ao contrario -- text-transform:lowercase; */
+  text-transform:capitalize; /* 1ª letra maisc */
+  text-shadow:1.5px 1px 0.5px red;
+  font-size:40px;
+  font-variant:small-caps;
+  letter-spacing:-2px;
+}
+
+#p3{ 
+  text-transform:uppercase;
+  color:blue;
+  font-weight:bold;
+text-align:center;
+  }

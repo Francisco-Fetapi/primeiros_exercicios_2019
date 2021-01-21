@@ -1,0 +1,61 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+*{
+  margin:0px;
+  padding:0px;
+  
+  }
+
+
+p{
+  text-align:center;
+  margin-top:0%;
+  
+/*
+  font-size:30px;
+  font-weight:bold; ou em px
+  font-style: italic;
+  font-variant:small-caps; */
+  
+  font-size:30px;
+  color:white;
+  background-color: #00d3ff;
+  
+  }
+
+#p1{
+  color:red;
+  background-color:white;
+  text-shadow:1.5px 1px 0.5px red;
+  
+  }
+#p2{
+ 
+  text-shadow:1.5px 1px 0.5px white;
+  background-color:red;
+  
+  }
+
+#p3{
+  
+  font-style:italic;
+  font-weight:bold;
+  background-color:#8113eb;
+  }
+
+#p4{
+  
+  font-family:"Trebuchets", arial, Helvetica, sans-serif;
+  font-variant:small-caps;
+  color:black;
+  text-transform:capitalize;
+  background-color:#ffbe00;
+  }
+
+body{
+  background-color: black;
+  
+  }
+  
+  

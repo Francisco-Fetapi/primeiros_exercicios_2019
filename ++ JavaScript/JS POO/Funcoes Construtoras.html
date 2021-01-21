@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca Valores</title>
+
+    <style>
+        @charset "utf-8";
+       
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.582);
+            margin-left:auto;
+            margin-right: auto;
+            font:normal 16pt arial;
+            overflow-x: hidden;
+         }
+    </style>
+
+</head>
+<body>
+    
+    <script>
+            //Nao muito convencional!
+
+        // function criarNovaPessoa(nome){
+
+        //     var pessoa = {};
+        //     pessoa.nome = nome;
+        //     pessoa.Comprimenta= () => {
+        //         alert("Ola eu sou "+pessoa.nome);
+        //     }
+        //     return pessoa;
+        // }
+
+        // var francisco = new criarNovaPessoa("Francisco Fetapi");
+        // francisco.Comprimenta();
+
+            function Pessoa(nome){
+                this.nome = nome;
+                this.Comprimenta = () => {
+                    window.alert("Ola, meu nome eh: "+this.nome);
+                }
+            }
+        
+            var eu = new Pessoa("Francisco Fetapi");
+            eu.Comprimenta();
+            
+            var Mateus = new Pessoa("Mateus Santiago");
+            Mateus.Comprimenta();
+
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+#b{
+  
+  width:40%;
+  height:20%;
+  background-color:#00d1ff;
+  margin-top:12.5%;
+  margin-left:25%;
+  font-size:40px;
+  border-radius:40%;
+  outline:none;
+  border-color:black;
+
+  }
+
+#b:active{
+  transition-duration:0.5s;
+  width:45%;
+  height:25%;
+  background-color:#1c00ff;
+  }
+
+body{
+  margin-top:1px;
+  padding-top:1px;
+  }

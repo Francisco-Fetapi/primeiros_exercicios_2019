@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com submenu</title>
+
+
+<style>
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu{
+        width:100%;
+        height:40px;
+        background-color: rgba(24, 81, 238, 0.651);
+    }
+    .menu ul{
+        /* display: flex;
+        flex-direction: column; */
+        list-style: none;
+    }
+    .menu ul li{
+        float:left;
+        width:140px;
+    }
+    .menu a{
+        padding:11px;
+        display: block;
+        color: white;
+        text-decoration: none;
+        text-align:center
+    }
+    .menu ul ul{
+        display: none;
+    }
+    .menu > ul li{
+        border-right: 1px solid white;
+    }
+   
+    .menu ul ul li{
+        background-color: rgba(8, 59, 228, 0.555);
+        border-top: 1px solid white;
+    }
+    .menu ul li:hover{
+        background-color: rgba(0, 0, 0, 0.233);
+    }
+    .menu li:hover > ul{
+        display: block;    
+    }
+    .menu ul ul li a{
+        background-color: rgb(32, 140, 202);
+    }
+    .menu ul ul a:hover{
+        background-color: rgba(0, 0, 0, 0.014);
+    }
+
+</style>
+
+
+</head>
+<body>
+   
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Pagina Inicial</a></li>
+            <li><a href="#">Paginas</a>
+                <ul>
+                    <li><a href="#">Desporto</a></li>
+                    <li><a href="#">Programação</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Mensagem</a>
+                <ul>
+                    <li><a href="#">Desporto</a></li>
+                    <li><a href="#">Programação</a></li>
+                    <li><a href="#">Programação</a></li>
+                </ul>                
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>

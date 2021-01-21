@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>   
+			<title>Menus com HTML e CSS </title>
+			<meta charset="utf-8"/>
+	</head>
+	<body>
+   <style type="text/css">
+   .menu ul li{
+   background-color:#6da3f9;
+   color:white;
+   float:left;
+   width:200px;
+   height:40px;
+   list-style:none;
+   display:inline;
+   font-size:16px;
+   text-align:center;
+   line-height:40px;
+   font-size:25px;
+   position:relative;
+   }
+
+   .menu ul li:hover{
+   background-color:#2c69cc;  
+   }
+   
+   .menu ul{
+   padding:0px;
+   }
+
+   .menu ul ul{ 
+   display:none;
+   }
+   
+   .menu ul li:hover > ul{
+   display:block;
+   }
+   
+ 	.menu ul ul ul{
+			padding-left:200px;
+			top:0px;
+			position:absolute;
+		}
+		
+		.menu ul ul ul li{
+			border-left:3px solid white;
+		}
+   
+   .menu ul ul li:hover{
+   background-color:#144aa0;
+   }
+   
+   .menu ul ul ul li:hover{
+   background-color:#062a66;
+   }
+   </style>
+   
+   
+	 <nav class="menu">
+   
+	   <ul>
+			<li>Argentina </li>
+				<li>Brasil
+					<ul>
+						<li>Norte </li>
+							<li>Nordeste
+							<ul>
+								<li>Bahia</li>
+								<li>Pernambunco</li>
+								<li>Sergipe</li>
+								<li>Alagoas</li>
+							</ul>	
+							</li>
+						<li>Centro-Oeste </li>
+						<li>Sul </li>
+							<li>SuDeste
+							<ul>
+								<li>Minas Gerais</li>
+								<li>Espirito Santo</li>
+								<li>São Paulo</li>
+								<li>Rio de Janeiro
+									<ul>
+										<li>Maracanã</li>
+										<li>Rio de Janeiro</li>
+										<li>São Paulo</li>
+										<li>Rio Gr. do Sul</li>
+									</ul>
+								</li>
+						    </ul>
+
+							</li>
+					</ul>
+				
+				</li>	  
+		    <li>Colombia </li>
+			<li>Paraguai </li>
+	   </ul>
+
+   </nav>
+
+
+
+   
+
+   
+   
+   
+   
+	</body>
+</html>

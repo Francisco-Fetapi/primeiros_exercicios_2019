@@ -1,0 +1,35 @@
+<html>
+<body>
+<PRE>
+<input type="radio" name=grupo
+onClick="document.bgColor='blue'">Azul
+<input type="radio" name=grupo
+onClick="document.bgColor='red'">Vermelho
+<input type="radio" name=grupo
+onClick="document.bgColor='yellow'">Amarelo
+<input type="radio" name=grupo
+onClick="document.bgColor='silver'">Cinza
+</pre>
+</body>
+
+<script>
+
+//alert(window.location.href);
+
+function ContarVisitas(form) {
+visitas=GetCookie("Visitas");
+if(!visitas) {
+visitas = 1;
+form.Contador.value="Esta é o seu primeiro click!"
+} else {
+visitas = parseInt(visitas) + 1;
+form.Contador.value="Você já clicou " + visitas + " vezes";
+}
+document.cookie="Visitas="+visitas+";";
+}
+
+ContarVisitas();
+</script>
+
+
+</html>

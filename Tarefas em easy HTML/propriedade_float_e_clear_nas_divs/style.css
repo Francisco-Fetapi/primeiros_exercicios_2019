@@ -1,0 +1,38 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+
+*{
+  margin:0;
+  padding:0;
+  
+  }
+div{
+  
+  font-size:40px;
+  text-align:center;
+  text-indent:20px;
+  }
+
+#div1{
+  width:190px;
+  background-color:#ca4343;
+  height:150px;
+  float:left;
+  }
+
+
+#div2{
+  width:185px;
+  height:150px;
+  background-color:#43cac9;
+  float:left;
+  }
+
+
+#div3{
+background-color:#008fff;
+  width:100%;
+  height:120px;
+ clear:both;
+  }

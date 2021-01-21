@@ -1,0 +1,22 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+ul{
+  
+  list-style:square outside; /* ou circle ou none */
+ /* list-style-position:outside;  ou inside */
+  }
+
+ol{
+  
+ /* list-style:upper-roman; */
+  
+  list-style:lower-alpha;
+  }
+
+h1{
+  
+  text-transform:uppercase;
+  
+  
+  }

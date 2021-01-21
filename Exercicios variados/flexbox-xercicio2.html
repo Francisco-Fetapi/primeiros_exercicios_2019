@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox exercicio 2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #tudo{
+            width:100%;
+            background-color: rgba(0, 0, 0, 0.596);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .logo{
+            width:90px;
+            padding:23px;
+            background-color: cadetblue;
+        }
+        header{
+            display: flex;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+        header nav{
+            flex: 1 1 auto;
+            background-color: rgba(62, 100, 150, 0.801);
+        }
+        header ul{
+            display: flex;
+            justify-content: flex-end;
+            flex-flow: row nowrap;
+            list-style: none;
+            margin-top:3px;
+            margin-right: 12px;
+        } 
+        header a{
+            padding:8px 21px;
+            font-size:19px;
+            text-decoration: none;
+            color: white;
+            border:1px solid rgba(255, 255, 255, 0.459);
+        }
+        header a:hover{
+            background-color: rgba(0, 0, 0, 0.582);
+        }
+        div{
+            border: 1px solid white;
+            padding:40px;
+        }
+        main{
+            margin-top: 45px;
+            display: flex;
+            flex-flow:row wrap;
+        }
+        #bloco1{
+            display:flex;
+            flex-flow: row wrap;
+            width:65%;
+        }
+        .b{
+            height:240px;
+            flex: 1 1 38%;
+            background-color: rgba(137, 43, 226, 0.473);
+        }
+        #bloco2{
+            display: flex;
+            width:35%;
+            flex-flow: row wrap;
+        }
+        .bb{
+            flex:1 1 100%;
+            background-color: rgba(127, 255, 212, 0.521);
+        }
+        @media (max-width:870px){
+            #bloco1{
+                width:55%;
+            }
+            #bloco2{
+                width:45%;
+            }
+        }
+        @media (max-width:700px){
+            main{
+                flex-direction: column;
+            }
+            #bloco1{
+                width:100%;
+            }
+            .b{
+                flex-basis:25%;
+            }
+            #bloco2{
+                width: 100%;
+            }
+            .bb{
+                height:170px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <article id="tudo">
+        <header>
+            <article class="logo"></article>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="bloco1">
+                <div class="b"></div>
+                <div class="b"></div>
+                <div class="b"></div>
+                <div class="b"></div>
+            </section>
+
+            <section id="bloco2">
+                <div class="bb"></div>
+                <div class="bb"></div>
+                <div class="bb"></div>
+            </section>
+        </main>
+    </article> 
+
+    <script>
+        // window.onresize = function(){
+        //     document.querySelector('.b').innerText = window.innerWidth+'px';
+        // }
+    </script>
+</body>
+</html>

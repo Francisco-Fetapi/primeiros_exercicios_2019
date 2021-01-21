@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Jqery</title>
+    <script src="jquery-1.10.2.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            overflow-x: hidden;
+        }
+            .div{
+                width:80%;
+                height: 320px;
+                border: 2px solid rgba(0, 0, 0, 0.39);
+                margin-bottom: 12px;
+                margin-left: 0px;
+                background-size: 100% 100%;
+                background-color: tomato;
+                max-width:550px;
+
+            }
+            .div2{
+                background-color: rgb(71, 129, 255);
+
+            }
+            button{
+                padding: 9px 12px;
+                color: white;
+                background-color: yellowgreen;
+            }
+            table{
+                color: white;
+                margin: 22px 2px;
+                border-collapse: collapse;
+                border:1px solid black;
+                font-size: 15px;
+                /* position: absolute; */
+                /* margin-top: 20%;
+                top:55%; */
+            }
+            table caption{
+                background-color:cornflowerblue;
+                font-weight: 600;
+                font-size:19px;
+                padding-top:8px;
+                padding-bottom: 8px;
+            }
+            td,th{
+                border:1px solid black; 
+                padding: 8px 12px; 
+            }
+            th{
+                background-color: darkslateblue;
+            }
+            td{
+                background-color: rgba(0, 0, 0, 0.411);
+            }
+            tr:last-child td{
+                padding:0px;
+            }
+            tr:last-child td button{
+                width:100%;
+            }
+    </style>
+</head>
+<body>
+    
+<div class="div">
+    <table>
+        <caption>Atalhos para as animações</caption>
+        <thead>
+            <tr>
+                <th>Animação 1</th>
+                <th>Animação 2</th>
+                <th>Animação 3</th>
+                <th>Animação 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tecla Cima</td>
+                <td>Tecla Esquerda</td>
+                <td>Tecla Direita</td>
+                <td>Tecla Baixo</td>
+            </tr>
+            <tr style="padding:0px">
+                <td><button id="EM"> Esconder/Mostrar </button></td>
+                <td><button id="an">Animar 1</button></td>
+                <td><button id="an2">Animar 2</button></td>
+                <td><button id="an3">Animar 3</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="div2">
+
+</div>
+    <script>
+
+        // $('#Es').click(function(){
+        //     $(".div").slideUp();
+        // });
+        // $('#Mos').click(function(){
+        //     $('.div').slideDown();
+        // })
+
+        $(document).ready(function(){
+            $('.div').css('margin-left','5%');
+            $('.div').css({border:"2px solid orange"});
+            $('.div').css(estiloPrincipal);
+        })
+
+        $('button').on('click',function(){
+            $('body').off();
+        })
+        $('body').mousemove(function(){
+            console.log(`X:${event.pageX} Y:${event.pageY} com o evento ${event.type}`)
+        })
+
+//estilos a serem mudados
+        var estiloPrincipal = {
+            width:'80%',
+            height:'320px',
+            marginLeft:'49px',
+            border:'2px solid blue',
+            'border-radius':'0px',
+            display:'block'
+        }
+        var estilo2 = {
+            width:'0px',
+            heigth:'22px',
+        } 
+        var estilo3 = {
+            marginLeft:'100%',
+        }
+        var estilo4 = {
+            width:'0px',
+            height:'0px',
+            border:'3px solid black',
+            'border-radius':'50%',
+            marginLeft:'50%'
+        }
+
+//funcoes das animacoes
+        function paraEsq(){
+            if($('.div').css('marginLeft') == "49px"){
+                $('.div').animate(estilo3,700);
+                console.log('volta');
+            }
+            else{
+                $('.div').animate(estiloPrincipal,400);
+            }
+        }
+        function encolhe(){
+            if($('.div').css('width') == estilo4.width){
+                $('.div').animate(estiloPrincipal,800);
+            } 
+            else{
+                $('.div').animate(estilo4,1200,function(){
+                    // this.style.display = "none";
+                    //$(this).css('display','none');
+                    console.log('Animacao terminada');
+                });
+            } 
+        }
+        function encolheEsqu(){
+            if($('.div').width() != 0){
+                $('.div').animate(estilo2,500)
+            }
+            else{
+                $('.div').animate(estiloPrincipal,250);
+            }   
+        }
+
+//Ao clicar num botao
+        $('#an2').click(paraEsq);
+        $('#an3').click(encolhe);
+        $('#an').click(encolheEsqu);
+        $('#EM').click(function(){
+            $('.div').slideToggle();
+        })
+        
+//ao clicar numa tecla
+        $(window).keydown(function(event){
+            console.log(event.which)
+            if(event.which == 37){
+                encolheEsqu();
+            }
+            if(event.which == 38){
+                $('.div').slideToggle();
+            }
+            if(event.which == 39){
+                paraEsq();
+            }
+            if(event.which == 40){
+                encolhe();
+            }
+        })
+
+    </script>
+
+</body>
+</html>

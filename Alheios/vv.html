@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html 
+<head>
+<meta charset="utf-8">
+<title>CSS MAESTRO</title>
+<style>
+.rotate{
+perspective-origin: 0% 100%;
+perspective: 500px;
+transform-style: preserve-3d;
+margin-left: 300px;
+}
+.rodar{
+width: 200px;
+height: 200px;
+grid-area: rodar;
+background-color: black;
+transition: transform 2s ease-in;
+}
+#slider{
+appearance: slider-vertical;
+}
+</style>
+</head>
+<body id="body">
+<div id="xslider">
+<input name="range" type="range" id="slider" min="0" max="360" value="0">
+<label for="slider">rotação:</label>
+<span id="xdegrees">0</span><strong>deg</strong>
+</div>
+</div>
+<div class="rotate">
+<div class="rodar" id="rodar"></div>
+</div>
+<script>
+window.onload=init;
+function init(){
+document.getElementById("slider").onchange=rotate;
+}
+function rotate(){
+var valor=document.getElementById("slider").value;
+var numero= document.getElementById("xdegrees").textContent=valor;
+var rodar=`rotateX(${valor}deg)`;
+var rotate=document.getElementById("rodar");
+rotate.style.transform=rodar;
+}
+</script>
+</body>
+</html>

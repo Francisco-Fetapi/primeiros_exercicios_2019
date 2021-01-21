@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Ui</title>
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
+</head>
+<body>
+    
+    <div id="acordion">
+        <h2>Primeiro Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident similique sequi impedit? Magnam sed at quia unde vel id iste aliquam ad veniam harum! Aut voluptate debitis distinctio dolorum esse!</p>
+        <h2>Segundo Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident similique sequi impedit? Magnam sed at quia unde vel id iste aliquam ad veniam harum! Aut voluptate debitis distinctio dolorum esse!</p>
+        <h2>Terceiro Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident similique sequi impedit? Magnam sed at quia unde vel id iste aliquam ad veniam harum! Aut voluptate debitis distinctio dolorum esse!</p>
+    </div>
+    <br><br>
+    <div class="ui-widget">
+        <label for="linguagens">Linguagem: </label>
+        <input id="linguagens" placeholder="Autocomplete" />
+        <br/><br/><br/>
+        <label for="data">Insira uma data</label>
+        <input type="text" placeholder="Clique aqui" name="" id="data">
+    </div>
+    <div id="dialog" title="Aviso do sistema">
+        <p>Você acha que esse é o melhor
+        livro de JavaScript que já existiu?</p>
+    </div>
+    <button id="btn">Enviar</button>
+    
+    <script src="./jquery-ui/jquery.min.js"></script>
+    <script src="./jquery-ui/jquery-ui.min.js"></script>
+    
+    <script>
+        linguagens = [
+            'Francisco',
+            'Camalata',
+            'Fuayenda',
+            'Fetapi'
+        ]
+        $('#acordion').accordion();
+        $('#linguagens').autocomplete({source:linguagens})
+        $('#btn').button();
+        $('#data').datepicker({
+            showWeek: true,
+            firstDay: 0,
+            dateFormat: "dd/mm/yy",
+            dayNames: ["Domingo",
+            "Segunda-Feira",
+            "Terça-Feira",
+            "Quarta-Feira",
+            "Quinta-Feira",
+            "Sexta-Feira",
+            "Sábado"],
+            dayNamesMin: ["D", "S", "T", "Q", "Q", "S", "S"],
+            monthNames: ["Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"],
+            monthNamesShort: ["Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez"],
+            showButtonPanel: true,
+            currentText: "Hoje",
+            closeText: "Fechar",
+            weekHeader: "#"
+        });
+        // $('#dialog').dialog({
+        //     buttons:{
+        //         'Sim':function(){
+        //             $(this).dialog('close');
+        //         },
+        //         'Nao':function(){
+        //             $(this).dialog('close')
+        //         }
+        //     }
+        // });
+
+
+        function Animal(){
+            this.comer = function(){
+                console.log('Comendo');
+            }
+            this.respirar = function(){
+                console.log('Respirar');
+            }
+        }
+        function Mamifero(){
+            this.mamar = function(){
+                console.log('Eu mamo');
+            }
+        }
+        function Gato(){
+            this.miar = function(){
+                console.log('Miar');
+            }
+        }
+        function Cachorro(){
+            this.latir = function(){
+                console.log('Au Au');
+            }
+            this.comer = function(){
+                console.log('Eu como racao!');
+            }
+        }
+        Mamifero.prototype = new Animal();
+        Gato.prototype = new Mamifero();
+        Cachorro.prototype = new Mamifero();
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* Created Using Easy HTML v1.2.5 */
+/* https://play.google.com/store/apps/details?id=ak.andro.easyhtml */
+
+div{
+  
+  
+  
+  }
+
+
+#div{
+  width:80%;
+  
+  border-width:1px;
+  border-style:solid;
+  border-color:#c00;
+  }
+
+#div1{
+  width:80%;
+    
+  border-width:4px;
+  border-style:dotted;
+  border-color:#00a9ff;
+  
+  
+  }
+
+#div2{
+  
+  width:80%;
+  
+  border-width:4px;
+  border-style:dashed;
+  border-color:#00e2ff;
+  }
+
+
+#div3{
+  width:80%;
+  
+  border-width:10px;
+  border-style:double;
+  border-color:#f49223;
+  }
+
+*{
+  margin:20px auto 20px;
+  padding:2px 0px 2px;
+  }
+
+h1{
+  text-align:center;
+  margin-bottom:-13px;
+  }
+
+#div4{
+  width:80%;
+  
+  border-top-width:10px;
+  border-top-style:double;
+  border-top-color:#f49223;
+  
+  border-left:3px solid #f49223;
+  
+  }

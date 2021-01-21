@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flex-container{
+            width:90%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            background-color: rgba(0, 0, 0, 0.671);
+        }
+        .flex-item{
+            padding:20px;
+            border:2px solid rgb(21, 23, 24);
+        }
+        .item-1{
+            align-self: flex-end;
+        }
+        .item-2{
+            flex: 1 1 290px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div class="flex-item item-1"></div>
+        <div class="flex-item item-2"></div>
+    </div>
+
+    <script>
+        // var div = document.querySelectorAll('.flex-item');
+        // div.forEach(element => {
+        //     var num = element.getAttribute('class');
+        //     num = num[num.length-1];
+        //     element.innerHTML = num;
+        // });
+    </script>
+</body>
+</html>
